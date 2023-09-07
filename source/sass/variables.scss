@@ -5,7 +5,18 @@
 
 $color-default-black:               #000000;
 $color-default-white:               #ffffff;
+$color-black-russian:               #10101d;
+$color-jaguar:                      #272733;
+$color-summer-sky:                  #3e9cdc;
+$color-summer-sky-light:            #42a9ed;
+$color-summer-sky-lighter:          #43abf0;
+$color-endeavour:                   #286690;
+$color-silver:                      #c3c3c3;
+$color-blue-zodiac:                 #3d4050;
+$color-dolphin:                     #6f6d7b;
+
 $color-transparent:                 rgba(255, 255, 255, 0);
+$color-black-russian-transparent:   rgba(#10101d, 0.9);
 
 // Project palette
 // для нейминга цветов используем https://www.htmlcsscolor.com/hex/334482
@@ -21,13 +32,13 @@ $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0
 // ---------------------------------
 
 // переменная используемая в html для подключения скейлинга
-$fz-default:                        16px;
+$fz-default:                        18px;
 
 // у некоторых шрифтов в ios возникают проблемы с символом рубля
 // https://www.artlebedev.ru/kovodstvo/sections/159/#13
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
-$ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+$ff-placeholder:                    "Lato", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------

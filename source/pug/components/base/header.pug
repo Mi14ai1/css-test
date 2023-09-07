@@ -22,13 +22,13 @@ mixin header(headerMods, currentUrl)
   header.header(class=headerMods)
     .container
       if(currentUrl === "index.html")
-        //- lighthouse снимает 10 баллов SEO за <a> без href
-        span.header__logo Логотип
+        div.header__logo
+          img(src="img/svg/logo.svg" alt="LoremIpsum.Net" width="247" height="35")
       else
-        a.header__logo(href="index.html", aria-label="Переход на главную") Логотип
+        a.header__logo(href="index.html", aria-label="Переход на главную")
+          img(src="img/svg/logo.svg" alt="LoremIpsum.Net" width="247" height="35")
       nav.main-nav
-        button.main-nav__toggle.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-          +icon("icon-burger", 20, 20)
+        button.main-nav__toggle.burger.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
         .main-nav__wrapper
           ul.main-nav__list
             each link in headerLinks

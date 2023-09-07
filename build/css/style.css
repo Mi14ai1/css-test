@@ -359,9 +359,9 @@ body {
 html {
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   color: #000000;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -573,7 +573,7 @@ button,
 
 .header {
   padding: 28px 0;
-  background-color: #2c39f2;
+  background-color: rgba(16, 16, 29, 0.9);
 }
 .header .container {
   display: -webkit-box;
@@ -582,6 +582,10 @@ button,
 }
 .header__logo {
   color: #ffffff;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .main-nav__list {
