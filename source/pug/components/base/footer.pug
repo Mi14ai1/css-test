@@ -1,3 +1,16 @@
 mixin footer(footerMods)
   footer.footer(class=footerMods)
     .container
+      span.footer__copyrite &copy; 2018 &laquo;LoremIpsum.net&raquo; Все&nbsp;права защищены.
+      .footer__payment
+        a.link.link--with-icon(href="qiwi://")
+          svg(width="20px" height="20")
+            use(href="img/sprite.svg#icon-qiwi")
+          span Qiwi wallet
+        +link({
+          href:"#",
+          text: "sss",
+          icon: "icon-yawale",
+          iconWidth: "20",
+          iconHeight: "20"
+        })

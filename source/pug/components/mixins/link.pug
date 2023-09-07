@@ -1,0 +1,9 @@
+mixin link(props)
+  - const {icon, iconWidth, iconHeight, href, text} = props
+  if (!props.icon)
+    a(href=`${href}`).link&attributes(attributes)!= text
+  if (props.icon&&props.iconWidth&&iconHeight)
+    a(href=`${href}`).link&attributes(attributes)!= text
+      svg(width=`${iconWidth}` height=`${iconHeight}`)
+        use(href=`img/sprite.svg#${icon}`)
+      span!= text
