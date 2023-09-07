@@ -1,0 +1,7 @@
+.ordering {
+  background: no-repeat center/cover url("../img/content/form.png"),linear-gradient($color-jaguar,$color-jaguar);
+
+  @include retina {
+    background: no-repeat center/cover url("../img/content/form@2x.png"),linear-gradient($color-jaguar,$color-jaguar);
+  }
+}

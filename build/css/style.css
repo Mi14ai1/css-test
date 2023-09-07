@@ -337,7 +337,7 @@ template {
 }
 @font-face {
   font-style: normal;
-  font-weight: 400;
+  font-weight: 900;
   font-family: "Lato";
   font-display: swap;
   src: url("../fonts/lato-heavy.woff2") format("woff2"), url("../fonts/lato-heavy.woff") format("woff");
@@ -612,8 +612,9 @@ button,
 }
 
 .footer {
+  font-size: 13px;
   padding: 40px 0;
-  background-color: #2c39f2;
+  background-color: #3d4050;
 }
 
 .modal {
@@ -1594,6 +1595,41 @@ button,
   right: 0;
   bottom: -5px;
   color: #ff0000;
+}
+
+.link {
+  font-family: "Lato", "Arial", sans-serif;
+  font-size: 13px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.link svg {
+  color: #3e9cdc;
+}
+.link--gray {
+  color: silver;
+}
+
+.intro {
+  padding: 40px;
+  background-color: #ffffff;
+  background: no-repeat center/cover url("../img/content/intro.jpg");
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .intro {
+    background: no-repeat center/cover url("../img/content/intro@2x.jpg");
+  }
+}
+
+.ordering {
+  background: no-repeat center/cover url("../img/content/form.png"), -webkit-gradient(linear, left top, left bottom, from(#272733), to(#272733));
+  background: no-repeat center/cover url("../img/content/form.png"), linear-gradient(#272733, #272733);
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
+  .ordering {
+    background: no-repeat center/cover url("../img/content/form@2x.png"), -webkit-gradient(linear, left top, left bottom, from(#272733), to(#272733));
+    background: no-repeat center/cover url("../img/content/form@2x.png"), linear-gradient(#272733, #272733);
+  }
 }
 
 /* @mixin hover-focus {

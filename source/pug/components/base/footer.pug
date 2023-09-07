@@ -1,16 +1,52 @@
 mixin footer(footerMods)
+  -
+    const paymentData = [
+      {
+        href: "qiwi://",
+        text: "QIWI wallet",
+        icon: "icon-qiwi",
+        iconWidth: "20",
+        iconHeight: "20"
+      },
+      {
+        href: "yandexmoney://",
+        text: "Yandex Money",
+        icon: "icon-ya-money",
+        iconWidth: "20",
+        iconHeight: "20"
+      },
+      {
+        href: "wmr://",
+        text: "Web Money",
+        icon: "icon-webmoney",
+        iconWidth: "20",
+        iconHeight: "20"
+      },
+    ]
+
+    const contactsData = [
+      {
+        href: "mailto:info@ipsum228.com",
+        text: "info@ipsum228.com",
+        icon: "icon-infoemail",
+        iconWidth: "20",
+        iconHeight: "20"
+      },
+      {
+        href: "https://vk.com",
+        text: "Мы вконтакте",
+        icon: "icon-vk",
+        iconWidth: "20",
+        iconHeight: "20"
+      },
+    ]
+
   footer.footer(class=footerMods)
     .container
       span.footer__copyrite &copy; 2018 &laquo;LoremIpsum.net&raquo; Все&nbsp;права защищены.
       .footer__payment
-        a.link.link--with-icon(href="qiwi://")
-          svg(width="20px" height="20")
-            use(href="img/sprite.svg#icon-qiwi")
-          span Qiwi wallet
-        +link({
-          href:"#",
-          text: "sss",
-          icon: "icon-yawale",
-          iconWidth: "20",
-          iconHeight: "20"
-        })
+        each linkData in paymentData
+          +link(linkData).link--gray
+      .footer__contacts
+        each contactData in contactsData
+          +link(contactData)
