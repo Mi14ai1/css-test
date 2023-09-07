@@ -1,0 +1,15 @@
+.link {
+  font-family: $ff-regular;
+  font-size: 13px;
+  font-weight: 400;
+
+  color: $color-default-white;
+
+  svg {
+    color: $color-summer-sky;
+  }
+
+  &--gray {
+    color: silver;
+  }
+}

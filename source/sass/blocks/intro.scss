@@ -1,0 +1,9 @@
+.intro {
+  padding: 40px;
+
+  background-color: $color-default-white;
+  background: no-repeat center/cover url("../img/content/intro.jpg");
+  @include retina {
+    background: no-repeat center/cover url("../img/content/intro@2x.jpg");
+  }
+}
