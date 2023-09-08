@@ -1,28 +1,39 @@
 mixin ordering()
   .ordering
     .container
-      h2 Оформление  Заказа
-      p Перед заполнением формы ознакомьтесь с нашей схемой работы!
-      ul.stages
-        li.stages__item.stage
+      h2.title.ordering__title Оформление  #[<span class="title__blue">Заказа</span>]
+      p.ordering__text Перед заполнением формы ознакомьтесь с нашей схемой работы!
+      .stages
+        .stage
           .stage__icon
-          .stage__description
-        li.stages__item.stage
+            svg(width=`50` height=`50`)
+              use(href=`img/sprite.svg#icon-search`)
+          p.stage__description Lorem ipsum dolor sit amet
+        .stage
           .stage__icon
-          .stage__description
-        li.stages__item.stage
+            svg(width=`50` height=`50`)
+              use(href=`img/sprite.svg#icon-percent`)
+          p.stage__description Сonsecteturadipiscing elit
+        .stage
           .stage__icon
-          .stage__description
-        li.stages__item.stage
+            svg(width=`50` height=`50`)
+              use(href=`img/sprite.svg#icon-download`)
+          p.stage__description Sed do eiusmod tempor
+        .stage
           .stage__icon
-          .stage__description
-        li.stages__item.stage
+            svg(width=`50` height=`50`)
+              use(href=`img/sprite.svg#icon-email`)
+          p.stage__description Esse cillum dolore eu fugiat
+        .stage
           .stage__icon
-          .stage__description
-        form(action="#")
-          .input
-          .input
-          .input
-          .input
-          .input
-          button(type="submit")
+            svg(width=`50` height=`50`)
+              use(href=`img/sprite.svg#icon-money`)
+          p.stage__description Excepteur sint occaecat cupidatat non proident
+
+      form(action="#")
+        .input
+        .input
+        .input
+        .input
+        .input
+        button(type="submit")

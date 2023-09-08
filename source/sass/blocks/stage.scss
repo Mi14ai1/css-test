@@ -1,0 +1,56 @@
+.stage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex: 1 auto;
+
+  width: 100%;
+
+  &__description {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2em;
+    color: $color-default-white;
+    text-align: center;
+    margin: 0;
+  }
+}
+
+.stage__icon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: $color-default-white;
+
+  width: 100px;
+  height: 100px;
+  background-color: $color-summer-sky;
+
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 5px $color-endeavour;
+
+  margin-bottom: 22px;
+
+  svg {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+.stage:not(:last-child) .stage__icon::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -123%;
+  height: 6px; /* diametre */
+  width: 120%;
+  background:
+    repeat
+    space
+    radial-gradient(circle closest-side, $color-silver-lighter 90%, $color-transparent)
+    0/26px 100%; /* 14px = 6px + 8px */
+}

@@ -2,11 +2,13 @@ mixin intro()
   .intro
     .container
       h1.title.intro__title #[<span class="title__blue">Lorem ipsum</span> dolor sit ametconsectetur <span class="title__blue">adipiscing</span>]
-      p At vero eos et accusamus et iusto odio dignissimos ducimus!
-      ul
-        li
-          p Totam rem aperiam eaque ipsa
-          p Sit voluptatem accusantium doloremque laudantium
-          p Sed ut perspiciatis, unde omnis iste natus error
-      button.btn.btn--blue заказать
-      button.btn подробнее
+      p.intro__text.intro__text--bold At vero eos et accusamus et iusto odio dignissimos ducimus!
+      ul.list.intro__list
+        li.list__item.intro__list-item(data-item-mark="-")
+          p.intro__text Totam rem aperiam eaque ipsa
+        li.list__item.intro__list-item(data-item-mark="-")
+          p.intro__text Sit voluptatem accusantium doloremque laudantium
+        li.list__item.intro__list-item(data-item-mark="-")
+          p.intro__text Sed ut perspiciatis, unde omnis iste natus error
+      button.btn.btn--blue.intro__btn заказать
+      button.btn.intro__btn подробнее

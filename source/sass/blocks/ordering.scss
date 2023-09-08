@@ -1,7 +1,26 @@
 .ordering {
+  padding: 125px 0;
+
   background: no-repeat center/cover url("../img/content/form.png"),linear-gradient($color-jaguar,$color-jaguar);
 
   @include retina {
     background: no-repeat center/cover url("../img/content/form@2x.png"),linear-gradient($color-jaguar,$color-jaguar);
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: 900;
+    text-align: center;
+    color: $color-default-white;
+    word-spacing: 0.2em;
+    margin: 0 0 31px;
+  }
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    color: $color-silver-light;
+    text-align: center;
+    margin: 0 0 78px;
   }
 }
