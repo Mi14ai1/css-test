@@ -1,16 +1,50 @@
 // min-height 848
 .intro {
   margin-top: -100px;
-  padding: 176px 0 140px;
+  padding: 208px 0 205px;
 
   background-color: $color-default-white;
-  background: no-repeat center/cover url("../img/content/intro.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat ;
+  background-image: url("../img/content/intro.jpg");
   @include retina {
-    background: no-repeat center/cover url("../img/content/intro@2x.jpg");
+    background-image: url("../img/content/intro@2x.jpg");
+  }
+
+  &__list {
+    padding-left: 8px;
+    margin-bottom: 76px;
   }
 
   &__title {
-    margin-left: -2px;
+    margin: 0 0 87px -2px;
     line-height: 1.2em;
+    max-width: 780px;
+  }
+
+  &__text {
+    font-size: 20px;
+    line-height: 1.4em;
+    font-weight: 400;
+    margin: 0;
+  }
+
+  &__text:not(.intro__list-item .intro__text) {
+    line-height: 1.2em;
+    margin: 0 0 9px -2px;
+  }
+
+  .intro__text--bold {
+    font-weight: 700;
+  }
+
+  &__btn {
+    max-width: 183px;
+    width: 100%;
+  }
+
+  &__btn + &__btn {
+    margin-left: 26px;
   }
 }

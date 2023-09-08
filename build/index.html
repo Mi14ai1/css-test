@@ -46,7 +46,7 @@
             <button class="main-nav__toggle burger btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
             <div class="main-nav__wrapper">
               <ul class="main-nav__list">
-                <li class="main-nav__item"><a class="main-nav__link" href="#">Бизнес</a>
+                <li class="main-nav__item"><span class="main-nav__link is-active">Бизнес</span>
                 </li>
                 <li class="main-nav__item"><a class="main-nav__link" href="#">О нас</a>
                 </li>
@@ -63,52 +63,76 @@
         <div class="intro">
           <div class="container">
             <h1 class="title intro__title"><span class="title__blue">Lorem ipsum</span> dolor sit ametconsectetur <span class="title__blue">adipiscing</span></h1>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
-            <ul>
-              <li>
-                <p>Totam rem aperiam eaque ipsa</p>
-                <p>Sit voluptatem accusantium doloremque laudantium</p>
-                <p>Sed ut perspiciatis, unde omnis iste natus error</p>
+            <p class="intro__text intro__text--bold">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+            <ul class="list intro__list">
+              <li class="list__item intro__list-item" data-item-mark="-">
+                <p class="intro__text">Totam rem aperiam eaque ipsa</p>
+              </li>
+              <li class="list__item intro__list-item" data-item-mark="-">
+                <p class="intro__text">Sit voluptatem accusantium doloremque laudantium</p>
+              </li>
+              <li class="list__item intro__list-item" data-item-mark="-">
+                <p class="intro__text">Sed ut perspiciatis, unde omnis iste natus error</p>
               </li>
             </ul>
-            <button class="btn btn--blue">заказать</button>
-            <button class="btn">подробнее</button>
+            <button class="btn btn--blue intro__btn">заказать</button>
+            <button class="btn intro__btn">подробнее</button>
           </div>
         </div>
         <div class="ordering">
           <div class="container">
-            <h2>Оформление  Заказа</h2>
-            <p>Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
-            <ul class="stages">
-              <li class="stages__item stage">
-                <div class="stage__icon"></div>
-                <div class="stage__description"></div>
-              </li>
-              <li class="stages__item stage">
-                <div class="stage__icon"></div>
-                <div class="stage__description"></div>
-              </li>
-              <li class="stages__item stage">
-                <div class="stage__icon"></div>
-                <div class="stage__description"></div>
-              </li>
-              <li class="stages__item stage">
-                <div class="stage__icon"></div>
-                <div class="stage__description"></div>
-              </li>
-              <li class="stages__item stage">
-                <div class="stage__icon"></div>
-                <div class="stage__description"></div>
-              </li>
-              <form action="#">
-                <div class="input"></div>
-                <div class="input"></div>
-                <div class="input"></div>
-                <div class="input"></div>
-                <div class="input"></div>
-                <button type="submit"></button>
-              </form>
-            </ul>
+            <h2 class="title ordering__title">Оформление  <span class="title__blue">Заказа</span></h2>
+            <p class="ordering__text">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+            <div class="stages">
+              <div class="stage">
+                <div class="stage__icon">
+                  <svg width="50" height="50">
+                    <use href="img/sprite.svg#icon-search"></use>
+                  </svg>
+                </div>
+                <p class="stage__description">Lorem ipsum dolor sit amet</p>
+              </div>
+              <div class="stage">
+                <div class="stage__icon">
+                  <svg width="50" height="50">
+                    <use href="img/sprite.svg#icon-percent"></use>
+                  </svg>
+                </div>
+                <p class="stage__description">Сonsecteturadipiscing elit</p>
+              </div>
+              <div class="stage">
+                <div class="stage__icon">
+                  <svg width="50" height="50">
+                    <use href="img/sprite.svg#icon-download"></use>
+                  </svg>
+                </div>
+                <p class="stage__description">Sed do eiusmod tempor</p>
+              </div>
+              <div class="stage">
+                <div class="stage__icon">
+                  <svg width="50" height="50">
+                    <use href="img/sprite.svg#icon-email"></use>
+                  </svg>
+                </div>
+                <p class="stage__description">Esse cillum dolore eu fugiat</p>
+              </div>
+              <div class="stage">
+                <div class="stage__icon">
+                  <svg width="50" height="50">
+                    <use href="img/sprite.svg#icon-money"></use>
+                  </svg>
+                </div>
+                <p class="stage__description">Excepteur sint occaecat cupidatat non proident</p>
+              </div>
+            </div>
+            <form action="#">
+              <div class="input"></div>
+              <div class="input"></div>
+              <div class="input"></div>
+              <div class="input"></div>
+              <div class="input"></div>
+              <button type="submit"></button>
+            </form>
           </div>
         </div>
       </main>
