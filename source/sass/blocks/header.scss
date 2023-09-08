@@ -1,5 +1,6 @@
 .header {
-  padding: 28px 0;
+  position: relative;
+  padding: 39px 0 38px;
 
   background-color: $color-black-russian-transparent;
 
@@ -9,6 +10,13 @@
 
   &__logo {
     color: $color-default-white;
+    margin-right: 20px;
+    flex-shrink: 0;
+    max-width: 245px;
+    max-height: 24px;
     user-select: none;
+    @include vp-767 {
+      z-index: 1;
+    }
   }
 }

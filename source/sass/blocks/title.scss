@@ -1,0 +1,13 @@
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1em;
+  color: $color-default-black;
+  text-transform: uppercase;
+
+  max-width: 780px;
+
+  &__blue {
+    color: $color-summer-sky;
+  }
+}

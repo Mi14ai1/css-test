@@ -1,17 +1,23 @@
 .btn {
   display: inline-flex;
+  color: $color-black-russian-text;
+
   padding: 10px 20px;
 
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
+  background-color: $color-default-white;
+  border: solid 1px $color-dolphin;
+  border-radius: 4px;
   cursor: pointer;
 
   transition: opacity $trans-default;
 
   &--red {
     background-color: $color-torch-red;
+  }
+
+  &--blue {
+    color: $color-default-white;
+    background-color: $color-summer-sky;
   }
 
   &:disabled {
