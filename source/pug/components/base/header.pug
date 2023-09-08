@@ -23,10 +23,11 @@ mixin header(headerMods, currentUrl)
     .container
       if(currentUrl === "index.html")
         div.header__logo
-          img(src="img/svg/logo.svg" alt="LoremIpsum.Net" width="247" height="35")
+          img(src="img/svg/logo.svg" alt="LoremIpsum.Net" width="245" height="24")
       else
         a.header__logo(href="index.html", aria-label="Переход на главную")
-          img(src="img/svg/logo.svg" alt="LoremIpsum.Net" width="247" height="35")
+          img(src="img/svg/logo.svg" alt="LoremIpsum.Net" width="245" height="24")
+      //- for open menu nav.main-nav.main-nav--menu-open
       nav.main-nav
         button.main-nav__toggle.burger.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
         .main-nav__wrapper

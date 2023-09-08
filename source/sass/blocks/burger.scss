@@ -1,0 +1,30 @@
+.burger {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: transparent;
+  border: none;
+
+  box-shadow: 0 2px 0 0 $color-default-white, 0 -2px 0 0 $color-default-white;
+  width: 40px;
+  height: 30px;
+  user-select: none;
+
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $color-default-white;
+    transform: translateY(-50%);
+    transition: $trans-default;
+  }
+  @include vp-767 {
+    z-index: 1;
+  }
+}
