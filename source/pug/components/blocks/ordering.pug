@@ -31,7 +31,13 @@ mixin ordering()
           p.stage__description Excepteur sint occaecat cupidatat non proident
 
       form(action="#")
-        .input
+        -
+          const selectOptions = ["Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum"]
+          const selectOptionsArr = selectOptions.map(el=>({text: el, value: el}))
+        +custom-select({
+          placeholder: "Выберите тип системы",
+          optionsList: selectOptionsArr,
+        })("data-select", data-validate-type="select").custom-select
         .input
         .input
         .input
