@@ -24,3 +24,14 @@
     margin: 0 0 78px;
   }
 }
+
+.ordering__form-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.ordering__range {
+  grid-column: 1/3;
+}

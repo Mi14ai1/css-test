@@ -1,0 +1,4 @@
+mixin icon(props)
+  - const {width, height, icon} = props
+  svg(width=`${width}` height=`${height}` xmlns="http://www.w3.org/2000/svg")
+    use(href=`img/sprite.svg#${icon}`)
