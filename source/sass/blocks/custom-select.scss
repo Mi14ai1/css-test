@@ -1,15 +1,6 @@
 .custom-select {
   position: relative;
 
-  width: 300px;
-  padding: 14px 0 28px;
-  margin: 0 0 44px 0;
-
-  @media screen and (max-width: 767px) {
-    padding: 4px 0 14px;
-    width: 100%;
-  }
-
   &__label {
     position: absolute;
     top: 50%;

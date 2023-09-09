@@ -6,95 +6,52 @@ mixin ordering()
       .stages
         .stage
           .stage__icon
-            svg(width=`50` height=`50`)
-              use(href=`img/sprite.svg#icon-search`)
+            +icon({ width: 50, height: 50, icon: "icon-search" })
           p.stage__description Lorem ipsum dolor sit amet
         .stage
           .stage__icon
-            svg(width=`50` height=`50`)
-              use(href=`img/sprite.svg#icon-percent`)
+            +icon({ width: 50, height: 50, icon: "icon-percent" })
           p.stage__description Сonsecteturadipiscing elit
         .stage
           .stage__icon
-            svg(width=`50` height=`50`)
-              use(href=`img/sprite.svg#icon-download`)
+            +icon({ width: 50, height: 50, icon: "icon-file" })
           p.stage__description Sed do eiusmod tempor
         .stage
           .stage__icon
-            svg(width=`50` height=`50`)
-              use(href=`img/sprite.svg#icon-email`)
+            +icon({ width: 50, height: 50, icon: "icon-email" })
           p.stage__description Esse cillum dolore eu fugiat
         .stage
           .stage__icon
-            svg(width=`50` height=`50`)
-              use(href=`img/sprite.svg#icon-money`)
+            +icon({ width: 50, height: 50, icon: "icon-money" })
           p.stage__description Excepteur sint occaecat cupidatat non proident
 
-      form(action="#")
+      form(action="#" method="method")
         -
           const selectOptions = ["Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum"]
           const selectOptionsArr = selectOptions.map(el=>({text: el, value: el}))
-        +custom-select({
-          placeholder: "Выберите тип системы",
-          optionsList: selectOptionsArr,
-        })("data-select", data-validate-type="select").custom-select
-        +custom-input({
-          inputPlaceholder: "Ваш e-mail",
-          inputType: "email",
-          inputName: "email"
-        }).custom-input
-        +custom-input({
-          inputPlaceholder: "Ваше имя",
-          inputName: "name"
-        }).custom-input
+        .ordering__form-container
+          +custom-select({
+            placeholder: "Выберите тип системы",
+            optionsList: selectOptionsArr,
+          })("data-select", data-validate-type="select").custom-select
+          +custom-input({
+            inputPlaceholder: "Ваш e-mail",
+            inputType: "email",
+            inputName: "email"
+          }).custom-input
+          +custom-input({
+            inputPlaceholder: "Ваше имя",
+            inputName: "name"
+          }).custom-input
+          .range.ordering__range(data-range)
+            span.range__value
+            label
+              span.range__label Sed ut perspiciatis, unde omnis iste natus
+              input(type="range" min="0" max="100" value="75").range__slider
+          .input-upload.input-upload--file(data-upload="file", data-validate-type="custom-upload", data-required)
+            label
+              input(type="file", name="upload-file")
+              +icon({ width: 50, height: 50, icon: "icon-file" })
+              span.btn Загрузить файл
 
-        //-
-            <div class="input-upload input-upload--file" data-upload="file" data-validate-type="custom-upload" data-required="">
-              <label>
-                 <input type="file" name="upload-file" multiple="" accept=".pdf,.docx,.xlsx" class="">
-                 <span class="btn">Загрузить файл</span>
-              </label>
-                <div class="input-upload__preview">
-                </div>
-            </div>
-        .input-upload.input-upload--file(data-upload="file", data-validate-type="custom-upload", data-required)
-          label
-            input(type="file", name="upload-file")
-            span.btn Загрузить файл
-        .range(data-range)
-          span.range__value
-          label
-            span.range__label Sed ut perspiciatis, unde omnis iste natus
-            input(type="range" min="0" max="100" value="75").range__slider
-        .range(data-range)
-          span.range__value
-          label
-            span.range__label Sed ut perspiciatis, unde omnis iste natus
-            input(type="range" min="0" max="100" value="75").range__slider
-        .range(data-range)
-          span.range__value
-          label
-            span.range__label Sed ut perspiciatis, unde omnis iste natus
-            input(type="range" min="0" max="100" value="75").range__slider
-        .range(data-range)
-          span.range__value
-          label
-            span.range__label Sed ut perspiciatis, unde omnis iste natus
-            input(type="range" min="0" max="100" value="75").range__slider
-        .range(data-range)
-          span.range__value
-          label
-            span.range__label Sed ut perspiciatis, unde omnis iste natus
-            input(type="range" min="0" max="100" value="75").range__slider
-        .range(data-range)
-          span.range__value
-          label
-            span.range__label Sed ut perspiciatis, unde omnis iste natus
-            input(type="range" min="0" max="100" value="75").range__slider
-        .range(data-range)
-          span.range__value
-          label
-            span.range__label Sed ut perspiciatis, unde omnis iste natus
-            input(type="range" min="0" max="100" value="75").range__slider
-        .input
         button(type="submit")
