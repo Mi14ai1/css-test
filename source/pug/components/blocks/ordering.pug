@@ -38,8 +38,63 @@ mixin ordering()
           placeholder: "Выберите тип системы",
           optionsList: selectOptionsArr,
         })("data-select", data-validate-type="select").custom-select
-        .input
-        .input
-        .input
+        +custom-input({
+          inputPlaceholder: "Ваш e-mail",
+          inputType: "email",
+          inputName: "email"
+        }).custom-input
+        +custom-input({
+          inputPlaceholder: "Ваше имя",
+          inputName: "name"
+        }).custom-input
+
+        //-
+            <div class="input-upload input-upload--file" data-upload="file" data-validate-type="custom-upload" data-required="">
+              <label>
+                 <input type="file" name="upload-file" multiple="" accept=".pdf,.docx,.xlsx" class="">
+                 <span class="btn">Загрузить файл</span>
+              </label>
+                <div class="input-upload__preview">
+                </div>
+            </div>
+        .input-upload.input-upload--file(data-upload="file", data-validate-type="custom-upload", data-required)
+          label
+            input(type="file", name="upload-file")
+            span.btn Загрузить файл
+        .range(data-range)
+          span.range__value
+          label
+            span.range__label Sed ut perspiciatis, unde omnis iste natus
+            input(type="range" min="0" max="100" value="75").range__slider
+        .range(data-range)
+          span.range__value
+          label
+            span.range__label Sed ut perspiciatis, unde omnis iste natus
+            input(type="range" min="0" max="100" value="75").range__slider
+        .range(data-range)
+          span.range__value
+          label
+            span.range__label Sed ut perspiciatis, unde omnis iste natus
+            input(type="range" min="0" max="100" value="75").range__slider
+        .range(data-range)
+          span.range__value
+          label
+            span.range__label Sed ut perspiciatis, unde omnis iste natus
+            input(type="range" min="0" max="100" value="75").range__slider
+        .range(data-range)
+          span.range__value
+          label
+            span.range__label Sed ut perspiciatis, unde omnis iste natus
+            input(type="range" min="0" max="100" value="75").range__slider
+        .range(data-range)
+          span.range__value
+          label
+            span.range__label Sed ut perspiciatis, unde omnis iste natus
+            input(type="range" min="0" max="100" value="75").range__slider
+        .range(data-range)
+          span.range__value
+          label
+            span.range__label Sed ut perspiciatis, unde omnis iste natus
+            input(type="range" min="0" max="100" value="75").range__slider
         .input
         button(type="submit")
