@@ -13,7 +13,10 @@
     line-height: 1.2em;
     color: $color-default-white;
     text-align: center;
-    margin: 0 -20px;
+    margin: 0 -48px;
+    @include vp-1023 {
+      margin: 0 -20px;
+    }
   }
 }
 

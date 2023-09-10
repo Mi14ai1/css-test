@@ -66,12 +66,16 @@ export class CustomSelect {
     }
   }
 
-  _closeSelect() {
+  _closeSelect(item=null) {
     const activeSelect = document.querySelector('[data-select].is-open');
     document.removeEventListener('click', this._onDocumentClick);
     document.removeEventListener('keydown', this._onEscapePress);
     if (activeSelect) {
       activeSelect.classList.remove('is-open');
+    }
+
+    if (item.lenght) {
+      console.log('(())(())(()())')
     }
   }
 
@@ -250,7 +254,8 @@ export class CustomSelect {
     const selectItems = item.querySelectorAll('.custom-select__item');
     this._setActiveSelectItemsState(multiple, selectItems);
 
-    if (this._activeIndex.length) {
+
+    if (this._activeIndex.length&&!item.dataset.dontShowValue) {
       options.activeIndex = this._activeIndex;
       this._setSelectActiveState(multiple, insert, item);
     }

@@ -3,7 +3,7 @@ mixin ordering()
     .container
       h2.title.ordering__title Оформление  #[<span class="title__blue">Заказа</span>]
       p.ordering__text Перед заполнением формы ознакомьтесь с нашей схемой работы!
-      .stages
+      .stages.ordering__stages
         -
           const stages = [
             {width: 55, height: 55, icon: "icon-search", text: "Lorem ipsum dolor sit amet"},
@@ -19,13 +19,13 @@ mixin ordering()
 
       form(action="#" method="method")
         -
-          const selectOptions = ["Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum"]
-          const selectOptionsArr = selectOptions.map(el=>({text: el, value: el}))
+          const selectOptions = ["Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum", "Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum"]
+          const selectOptionsArr = selectOptions.map((el, i)=>({text: el, value: el, isActive: i === 0}))
         .ordering__form-container
           +custom-select({
             placeholder: "Выберите тип системы",
             optionsList: selectOptionsArr,
-          })("data-select", data-validate-type="select").custom-select
+          })("data-select", data-validate-type="select", data-dont-show-value= "true").custom-select.custom-input
           +custom-input({
             inputPlaceholder: "Ваш e-mail",
             inputType: "email",

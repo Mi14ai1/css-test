@@ -22,7 +22,7 @@
     top: 50%;
     left: 10px;
 
-    transform: translateY(-50%);
+    transform: translateY(-43%);
 
     transition: transform 0.3s ease, opacity 0.3s ease;
 
@@ -55,11 +55,11 @@
     align-items: center;
     width: 100%;
     height: 48px;
-    padding: 5px 10px;
+    padding: 5px 13px 5px 10px;
 
-    background-color: rgba(255, 255, 255, 0);
-    border: 2px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
+    background-color: rgba($color-default-white, 0.85);
+    border: 2px solid $color-default-white;
+    border-radius: 3px;
     outline: none;
     cursor: pointer;
 
@@ -81,19 +81,21 @@
 
   &__list {
     position: absolute;
-    bottom: 10px;
+    bottom: 2px;
     z-index: 1;
 
     width: 100%;
-    max-height: 100px;
+    max-height: 180px;
     margin: 0;
     padding: 0;
     overflow-y: auto;
 
     list-style: none;
 
-    background-color: #ffffff;
-    border: 2px solid #000000;
+    background-color: $color-jaguar;
+    border-radius: 0 0 3px 3px;
+    border: 1px solid $color-blue-zodiac;
+    border-top: none;
     transform: translateY(100%);
     visibility: hidden;
     opacity: 0;
@@ -110,7 +112,7 @@
     transition: background-color 0.3s ease;
 
     &[aria-selected="true"] {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba($color-default-white, 0.85);
 
       @media (hover: hover) {
         &:hover:not(.focus-visible) {
@@ -168,8 +170,8 @@
 
   &__icon {
     flex-shrink: 0;
-    width: 20px;
-    height: 10px;
+    width: 9px;
+    height: 5px;
     margin-left: auto;
 
     background-color: #000000;
@@ -189,6 +191,7 @@
 
   &.open-up {
     .custom-select__list {
+      color: $color-default-white;
       bottom: auto;
       top: 0;
       transform: translateY(calc(-100% + 10px));
@@ -196,6 +199,21 @@
   }
 
   &.is-open {
+    .custom-select__button {
+      background: $color-blue-zodiac-transparent;
+      border-color: $color-blue-zodiac;
+      border-radius: 3px 3px 0 0;
+      color: $color-default-white;
+    }
+
+    .custom-select__icon {
+      background-color: $color-default-white;
+    }
+
+    .custom-select__placeholder {
+      color: $color-default-white;
+    }
+
     .custom-select__list {
       visibility: visible;
       opacity: 1;

@@ -1,7 +1,10 @@
 .stages {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(5, 100px 1fr);
+  grid-template-columns: repeat(4, 100px 1fr) 100px;
+  max-width: 1056px;
+  margin-inline: auto;
+  gap: 6px;
 
   &__dots {
     position: relative;
@@ -21,7 +24,17 @@
             circle closest-side,
             $color-silver-lighter 90%,
             $color-transparent)
-        0/26px 100%; /* 14px = 6px + 8px */
+        0/23px 100%; /* 14px = 6px + 8px */
+
+      @include vp-1023 {
+        background:
+          repeat space
+          radial-gradient(
+              circle closest-side,
+              $color-silver-lighter 90%,
+              $color-transparent)
+          0/20px 100%; /* 14px = 6px + 8px */
+      }
     }
   }
 }
