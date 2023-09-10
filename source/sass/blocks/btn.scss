@@ -1,4 +1,5 @@
 .btn {
+  position: relative;
   display: inline-flex;
   vertical-align: center;
   justify-content: center;
@@ -19,7 +20,21 @@
   border-radius: 4px;
   cursor: pointer;
 
-  transition: opacity $trans-default;
+  isolation: isolate;
+  transition: opacity $trans-default, color $trans-default;
+
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: $color-summer-sky;
+    border-radius: 2px;
+    inset: 0;
+
+    scale: 0 1;
+    transform-origin: right;
+    transition: scale $trans-default;
+  }
 
   &--red {
     background-color: $color-torch-red;
@@ -29,6 +44,10 @@
     color: $color-default-white;
     background-color: $color-summer-sky;
     border-color: $color-default-white;
+
+    &::after {
+      background: $color-default-white;
+    }
   }
 
   &:disabled {
@@ -39,5 +58,17 @@
 
   @include hover-focus {
     opacity: 0.8;
+    color: $color-default-white;
+
+    &::after {
+      transform-origin: left;
+      scale: 1 1;
+    }
+  }
+
+  &--blue {
+    @include hover-focus {
+      color: $color-black-russian-text;
+    }
   }
 }

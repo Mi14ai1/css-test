@@ -4,26 +4,18 @@ mixin ordering()
       h2.title.ordering__title Оформление  #[<span class="title__blue">Заказа</span>]
       p.ordering__text Перед заполнением формы ознакомьтесь с нашей схемой работы!
       .stages
-        .stage
-          .stage__icon
-            +icon({ width: 50, height: 50, icon: "icon-search" })
-          p.stage__description Lorem ipsum dolor sit amet
-        .stage
-          .stage__icon
-            +icon({ width: 50, height: 50, icon: "icon-percent" })
-          p.stage__description Сonsecteturadipiscing elit
-        .stage
-          .stage__icon
-            +icon({ width: 50, height: 50, icon: "icon-file" })
-          p.stage__description Sed do eiusmod tempor
-        .stage
-          .stage__icon
-            +icon({ width: 50, height: 50, icon: "icon-email" })
-          p.stage__description Esse cillum dolore eu fugiat
-        .stage
-          .stage__icon
-            +icon({ width: 50, height: 50, icon: "icon-money" })
-          p.stage__description Excepteur sint occaecat cupidatat non proident
+        -
+          const stages = [
+            {width: 55, height: 55, icon: "icon-search", text: "Lorem ipsum dolor sit amet"},
+            {width: 55, height: 55, icon: "icon-percent", text: "Сonsecteturadipiscing elit"},
+            {width: 55, height: 55, icon: "icon-file", text: "Sed do eiusmod tempor"},
+            {width: 55, height: 55, icon: "icon-email", text: "Esse cillum dolore eu fugiat"},
+            {width: 55, height: 55, icon: "icon-money", text: "Excepteur sint occaecat cupidatat non proident"},
+          ]
+        each stageData, index in stages
+          +stage(stageData)
+          if index < stages.length - 1
+            .stages__dots
 
       form(action="#" method="method")
         -
@@ -51,7 +43,7 @@ mixin ordering()
           .input-upload.input-upload--file(data-upload="file", data-validate-type="custom-upload", data-required)
             label
               input(type="file", name="upload-file")
-              +icon({ width: 50, height: 50, icon: "icon-file" })
-              span.btn Загрузить файл
-
+              .btn
+                +icon({ width: 50, height: 50, icon: "icon-file" })
+                span Загрузить файл
         button(type="submit")

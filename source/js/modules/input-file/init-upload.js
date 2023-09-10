@@ -5,7 +5,7 @@ const uploadImageDropBlock = document.querySelector('[data-upload="img-drop"]');
 
 export const uploadFile = () => new Upload(uploadFileBlock, {
   uploadLength: 5,
-  preview: true,
+  preview: false,
   maxFullSize: 1048576,
   accept: ['.pdf', '.docx', '.xlsx'],
   iconFormat: {
@@ -25,8 +25,8 @@ export const uploadFile = () => new Upload(uploadFileBlock, {
 
 export const uploadImageDrop = () => new Upload(uploadImageDropBlock, {
   uploadLength: 4,
-  dropZone: true,
-  previewImg: true,
+  dropZone: false,
+  previewImg: false,
   maxFileSize: 1048576,
   accept: ['.png', '.jpg', '.jpeg', '.webp'],
   iconFormat: {
