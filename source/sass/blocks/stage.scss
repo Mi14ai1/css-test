@@ -13,7 +13,7 @@
     line-height: 1.2em;
     color: $color-default-white;
     text-align: center;
-    margin: 0;
+    margin: 0 -20px;
   }
 }
 
@@ -38,19 +38,4 @@
     width: 55px;
     height: 55px;
   }
-}
-
-.stage:not(:last-child) .stage__icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  right: -123%;
-  height: 6px; /* diametre */
-  width: 120%;
-  background:
-    repeat
-    space
-    radial-gradient(circle closest-side, $color-silver-lighter 90%, $color-transparent)
-    0/26px 100%; /* 14px = 6px + 8px */
 }

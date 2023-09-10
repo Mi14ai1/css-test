@@ -1,0 +1,9 @@
+mixin stage(props)
+  - const {width, height, icon, text} = props
+
+  .stage
+    .stage__icon
+      if (width&&height&&icon)
+        +icon({width: width, height: height, icon: icon})
+    if (text)
+      p.stage__description!= text
