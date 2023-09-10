@@ -73,10 +73,6 @@ export class CustomSelect {
     if (activeSelect) {
       activeSelect.classList.remove('is-open');
     }
-
-    if (item.lenght) {
-      console.log('(())(())(()())')
-    }
   }
 
   _onSelectElementClickAction(element, index) {
@@ -150,7 +146,8 @@ export class CustomSelect {
         parent.classList.add('not-empty');
         parent.classList.add('is-valid');
         options[index + 1].selected = true;
-        this._closeSelect();
+
+        //this._closeSelect();
       }
     }
   }
