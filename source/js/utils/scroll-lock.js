@@ -40,7 +40,7 @@ export class ScrollLock {
     this._fixedBlockElements.forEach((block) => {
       block.style.paddingRight = null;
     });
-    document.body.removeAttribute('data-scroll');
+    document.body.removeAttribute('data-scroll, style, class');
     this._scrollTop = null;
   }
 }

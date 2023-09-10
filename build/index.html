@@ -44,7 +44,7 @@
           <div class="header__logo"><img src="img/svg/logo.svg" alt="LoremIpsum.Net" width="245" height="24"></div>
           <nav class="main-nav">
             <button class="main-nav__toggle burger btn-reset" type="button" aria-label="Переключатель отображения меню" aria-pressed="false"></button>
-            <div class="main-nav__wrapper">
+            <div class="main-nav__wrapper" data-fix-block>
               <ul class="main-nav__list">
                 <li class="main-nav__item"><span class="main-nav__link is-active">Бизнес</span>
                 </li>
@@ -74,9 +74,7 @@
               <li class="list__item intro__list-item" data-item-mark="-">
                 <p class="intro__text">Sed ut perspiciatis, unde omnis iste natus error</p>
               </li>
-            </ul>
-            <button class="btn btn--blue intro__btn">заказать</button>
-            <button class="btn intro__btn">подробнее</button>
+            </ul><a class="btn btn--blue intro__btn" href="#">заказать</a><a class="btn intro__btn" href="#">подробнее</a>
           </div>
         </div>
         <div class="ordering">

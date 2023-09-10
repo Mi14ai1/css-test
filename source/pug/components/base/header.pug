@@ -30,7 +30,7 @@ mixin header(headerMods, currentUrl)
       //- for open menu nav.main-nav.main-nav--menu-open
       nav.main-nav
         button.main-nav__toggle.burger.btn-reset(type="button", aria-label="Переключатель отображения меню", aria-pressed="false")
-        .main-nav__wrapper
+        .main-nav__wrapper('data-fix-block')
           ul.main-nav__list
             each link in headerLinks
               - const activeState = currentUrl === link.href

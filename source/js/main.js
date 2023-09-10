@@ -3,32 +3,10 @@ import {initModals} from './modules/modals/init-modals';
 import {Form} from './modules/form-validate/form';
 import {CustomSelect} from './modules/select/custom-select';
 import {uploadFile, uploadImageDrop} from './modules/input-file/init-upload';
+import {menuInit} from "./modules/menu/menu-init.js";
+import {rangeInit} from "./modules/range/range-init.js";
 
 // ---------------------------------
-
-const initRange = () => {
-  const ranges = document.querySelectorAll('[data-range]');
-  if (ranges.length === 0) {
-    return;
-  }
-
-  ranges.forEach((range) => {
-    const inputSlider = range.querySelector('.range__slider');
-    const rangeValue = range.querySelector('.range__value');
-    if (!inputSlider||!rangeValue) {
-      return;
-    }
-
-    rangeValue.innerText= inputSlider.value;
-
-    range.addEventListener('input', (e) => {
-      e.preventDefault();
-      console.log(this);
-      rangeValue.innerText= inputSlider.value;
-    });
-  });
-
-};
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -51,7 +29,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const form = new Form();
     window.form = form;
     form.init();
-    initRange();
+    rangeInit();
+    menuInit();
   });
 });
 

@@ -30,10 +30,16 @@
     line-height: 1em;
     text-transform: uppercase;
     color: $color-default-white;
+    transition: opacity $trans-default;
+    user-select: none;
 
     &.is-active {
       opacity: 0.6;
       color: $color-summer-sky-lighter;
+    }
+
+    @include hover-focus {
+      opacity: 0.3;
     }
   }
 
@@ -52,6 +58,8 @@
   }
 
   &--menu-open {
+    z-index: 1;
+
     .main-nav__toggle {
       box-shadow: none;
 
