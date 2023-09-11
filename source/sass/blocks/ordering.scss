@@ -24,7 +24,7 @@
     margin: 0 0 34px;
 
     @include vp-767 {
-      margin: 0 0 0 20px;
+      margin: 0 0 14px;
       font-size: 24px;
     }
   }
@@ -87,6 +87,10 @@
     font-size: 15px;
     font-weight: 600;
     line-height: 1.3em;
+
+    @include vp-767 {
+      font-size: 13px;
+    }
   }
 }
 
@@ -97,6 +101,10 @@
   max-width: 370px;
   width: 100%;
   padding: 14px;
+
+  @include vp-767 {
+    font-size: 13px;
+  }
 }
 
 .ordering__input + .ordering__input {
