@@ -16,34 +16,34 @@ mixin ordering()
           +stage(stageData)
           if index < stages.length - 1
             .stages__dots
-
-      form.ordering__form(action="#" method="post")
-        -
-          const selectOptions = ["Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum", "Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum"]
-          const selectOptionsArr = selectOptions.map((el, i)=>({text: el, value: el}))
-        .ordering__form-container
-          +custom-select({
-            placeholder: "Выберите тип системы",
-            optionsList: selectOptionsArr,
-          })("data-select", data-validate-type="select", data-dont-show-value= "true").custom-select.custom-input.ordering__input
-          +custom-input({
-            inputPlaceholder: "Ваш e-mail",
-            inputType: "email",
-            inputName: "email"
-          }).custom-input.ordering__input
-          +custom-input({
-            inputPlaceholder: "Ваше имя",
-            inputName: "name"
-          }).custom-input.ordering__input
-          .range.ordering__range.ordering__input(data-range)
-            span.range__value
-            label
-              span.range__label Sed ut perspiciatis, unde omnis iste natus
-              input(type="range" min="0" max="100" value="75").range__slider
-          .input-upload.input-upload--file.ordering__input(data-upload="file", data-validate-type="custom-upload", data-required)
-            label
-              input(type="file", name="upload-file")
-              span.btn.ordering__upload
-                +icon({ width: 18, height: 21, icon: "icon-file-upload" })
-                span Прикрепить файл
-        button.btn.btn--blue.ordering__submit(type="submit") Отправить
+      .form(data-form-validate data-callback="base")
+        form.ordering__form(method="post" novalidate)
+          -
+            const selectOptions = ["Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum", "Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum"]
+            const selectOptionsArr = selectOptions.map((el, i)=>({text: el, value: el}))
+          .ordering__form-container
+            +custom-select({
+              placeholder: "Выберите тип системы",
+              optionsList: selectOptionsArr,
+            })("data-select", data-validate-type="select", data-dont-show-value= "true").custom-select.custom-input.ordering__input
+            +custom-input({
+              inputPlaceholder: "Ваш e-mail",
+              inputType: "email",
+              inputName: "email"
+            }).custom-input.ordering__input(data-validate-type="email" data-limitation="email" data-reqired)
+            +custom-input({
+              inputPlaceholder: "Ваше имя",
+              inputName: "name"
+            }).custom-input.ordering__input(data-validate-type="text" data-limitation="name" data-reqired)
+            .range.ordering__range.ordering__input(data-range)
+              span.range__value
+              label
+                span.range__label Sed ut perspiciatis, unde omnis iste natus
+                input(type="range" min="0" max="100" value="75").range__slider
+            .input-upload.input-upload--file.ordering__input
+              label
+                input(type="file", name="upload-file")
+                span.btn.ordering__upload
+                  +icon({ width: 18, height: 21, icon: "icon-file-upload" })
+                  span Прикрепить файл
+          button.btn.btn--blue.ordering__submit(type="submit") Отправить

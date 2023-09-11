@@ -133,49 +133,51 @@
                 <p class="stage__description">Excepteur sint occaecat cupidatat non proident</p>
               </div>
             </div>
-            <form class="ordering__form" action="#" method="post">
-              <div class="ordering__form-container">
-                <div class="custom-select custom-input ordering__input" data-select data-validate-type="select" data-dont-show-value="true"><span class="custom-select__placeholder">Выберите тип системы</span>
-                  <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
-                  <ul class="custom-select__list" role="listbox">
-                    <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Sed ut perspiciatis</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Nemo enim ipsam</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Et harum quidem</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Temporibus autem</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Itaque earum rerum</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Sed ut perspiciatis</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Nemo enim ipsam</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Et harum quidem</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Temporibus autem</li>
-                    <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Itaque earum rerum</li>
-                  </ul>
+            <div class="form" data-form-validate data-callback="base">
+              <form class="ordering__form" method="post" novalidate>
+                <div class="ordering__form-container">
+                  <div class="custom-select custom-input ordering__input" data-select data-validate-type="select" data-dont-show-value="true"><span class="custom-select__placeholder">Выберите тип системы</span>
+                    <button class="custom-select__button" type="button" aria-label="Выберите одну из опций"><span class="custom-select__text"></span><span class="custom-select__icon"></span></button>
+                    <ul class="custom-select__list" role="listbox">
+                      <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Sed ut perspiciatis</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Nemo enim ipsam</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Et harum quidem</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Temporibus autem</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Itaque earum rerum</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Sed ut perspiciatis</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Nemo enim ipsam</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Et harum quidem</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Temporibus autem</li>
+                      <li class="custom-select__item" tabindex="0" data-select-value="item.value" aria-selected="undefined" role="option">Itaque earum rerum</li>
+                    </ul>
+                  </div>
+                  <div class="custom-input custom-input ordering__input" data-validate-type="email" data-limitation="email" data-reqired>
+                    <label>
+                      <input type="email" name="email" placeholder="Ваш e-mail">
+                    </label>
+                  </div>
+                  <div class="custom-input custom-input ordering__input" data-validate-type="text" data-limitation="name" data-reqired>
+                    <label>
+                      <input type="text" name="name" placeholder="Ваше имя">
+                    </label>
+                  </div>
+                  <div class="range ordering__range ordering__input" data-range><span class="range__value"></span>
+                    <label><span class="range__label">Sed ut perspiciatis, unde omnis iste natus</span>
+                      <input class="range__slider" type="range" min="0" max="100" value="75">
+                    </label>
+                  </div>
+                  <div class="input-upload input-upload--file ordering__input">
+                    <label>
+                      <input type="file" name="upload-file"><span class="btn ordering__upload">
+                        <svg width="18" height="21" xmlns="http://www.w3.org/2000/svg">
+                          <use href="img/sprite.svg#icon-file-upload"></use>
+                        </svg><span>Прикрепить файл</span></span>
+                    </label>
+                  </div>
                 </div>
-                <div class="custom-input custom-input ordering__input">
-                  <label>
-                    <input type="email" name="email" placeholder="Ваш e-mail">
-                  </label>
-                </div>
-                <div class="custom-input custom-input ordering__input">
-                  <label>
-                    <input type="text" name="name" placeholder="Ваше имя">
-                  </label>
-                </div>
-                <div class="range ordering__range ordering__input" data-range><span class="range__value"></span>
-                  <label><span class="range__label">Sed ut perspiciatis, unde omnis iste natus</span>
-                    <input class="range__slider" type="range" min="0" max="100" value="75">
-                  </label>
-                </div>
-                <div class="input-upload input-upload--file ordering__input" data-upload="file" data-validate-type="custom-upload" data-required>
-                  <label>
-                    <input type="file" name="upload-file"><span class="btn ordering__upload">
-                      <svg width="18" height="21" xmlns="http://www.w3.org/2000/svg">
-                        <use href="img/sprite.svg#icon-file-upload"></use>
-                      </svg><span>Прикрепить файл</span></span>
-                  </label>
-                </div>
-              </div>
-              <button class="btn btn--blue ordering__submit" type="submit">Отправить</button>
-            </form>
+                <button class="btn btn--blue ordering__submit" type="submit">Отправить</button>
+              </form>
+            </div>
           </div>
         </div>
       </main>
