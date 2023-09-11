@@ -27,8 +27,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const select = new CustomSelect();
     select.init();
     const form = new Form();
-    window.form = form;
     form.init();
+    window.form = form;
     rangeInit();
     menuInit();
   });
