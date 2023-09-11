@@ -11,12 +11,11 @@ export const rangeInit = () => {
       return;
     }
 
-    rangeValue.innerText= inputSlider.value;
+    rangeValue.innerText= `${inputSlider.value} %`;
 
     range.addEventListener('input', (e) => {
       e.preventDefault();
-      console.log(this);
-      rangeValue.innerText= inputSlider.value;
+      rangeValue.innerText= `${inputSlider.value} %`;
     });
   });
 

@@ -9,7 +9,6 @@ const scrollLock = new ScrollLock();
 
 const breakpoint = window.matchMedia(`(min-width:768px)`);
 const breakpointChecker = () => {
-   console.log(breakpoint.matches)
   if (breakpoint.matches) {
     menu.classList.remove('main-nav--menu-open')
     focusLock.unlock();
