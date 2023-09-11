@@ -23,6 +23,8 @@
   isolation: isolate;
   transition: opacity $trans-default, color $trans-default;
 
+  user-select: none;
+
   &::after {
     content: '';
     position: absolute;

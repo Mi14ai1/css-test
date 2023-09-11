@@ -20,7 +20,7 @@ mixin ordering()
       form.ordering__form(action="#" method="post")
         -
           const selectOptions = ["Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum", "Sed ut perspiciatis", "Nemo enim ipsam", "Et harum quidem", "Temporibus autem", "Itaque earum rerum"]
-          const selectOptionsArr = selectOptions.map((el, i)=>({text: el, value: el, isActive: i === 0}))
+          const selectOptionsArr = selectOptions.map((el, i)=>({text: el, value: el}))
         .ordering__form-container
           +custom-select({
             placeholder: "Выберите тип системы",

@@ -34,4 +34,9 @@
     width: 24px;
     height: 16px;
   }
+
+  @include hover-focus {
+    outline: none;
+    box-shadow: 0 3   px 0 0 $color-default-white, 0 -3px 0 0 $color-default-white;
+  }
 }
