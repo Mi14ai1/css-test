@@ -24,7 +24,14 @@
     transform: translateY(-50%);
     transition: $trans-default;
   }
+
   @include vp-767 {
     z-index: 1;
+  }
+
+  @include vp-374 {
+    right: 15px;
+    width: 24px;
+    height: 16px;
   }
 }

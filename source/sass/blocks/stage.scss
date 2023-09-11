@@ -14,9 +14,29 @@
     color: $color-default-white;
     text-align: center;
     margin: 0 -48px;
-    @include vp-1023 {
+
+    @include vp-1279 {
       margin: 0 -20px;
     }
+
+    @include vp-1023 {
+      margin: 0 -10px;
+    }
+
+    @include vp-767 {
+      text-align: initial;
+      margin: 0 0 0 20px;
+    }
+
+    @include vp-374 {
+      font-size: 14px;
+      margin: 0 0 0 10px;
+    }
+  }
+
+  @include vp-767 {
+    flex-direction: row;
+    align-items: center;
   }
 }
 
@@ -40,5 +60,10 @@
   svg {
     width: 55px;
     height: 55px;
+  }
+
+  @include vp-767 {
+    margin-bottom: 0;
+    flex-shrink: 0;
   }
 }

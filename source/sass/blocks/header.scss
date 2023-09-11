@@ -15,7 +15,9 @@
     max-width: 245px;
     max-height: 24px;
     user-select: none;
+
     @include vp-767 {
+      width: 180px;
       z-index: 1;
     }
   }

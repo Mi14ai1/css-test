@@ -6,21 +6,30 @@ mixin footer(footerMods)
         text: "QIWI wallet",
         icon: "icon-qiwi",
         iconWidth: "20",
-        iconHeight: "20"
+        iconHeight: "20",
+        attr: {
+          "rel": "noopener noreferer"
+        }
       },
       {
         href: "yandexmoney://",
         text: "Yandex Money",
         icon: "icon-ya-money",
         iconWidth: "20",
-        iconHeight: "20"
+        iconHeight: "20",
+        attr: {
+          "rel": "noopener noreferer"
+        }
       },
       {
         href: "wmr://",
         text: "Web Money",
         icon: "icon-webmoney",
         iconWidth: "20",
-        iconHeight: "20"
+        iconHeight: "20",
+        attr: {
+          "rel": "noopener noreferer"
+        }
       },
     ]
 
@@ -30,23 +39,31 @@ mixin footer(footerMods)
         text: "info@ipsum228.com",
         icon: "icon-infoemail",
         iconWidth: "20",
-        iconHeight: "20"
+        iconHeight: "20",
+        attr: {
+          "rel": "noopener noreferer"
+        }
       },
       {
         href: "https://vk.com",
         text: "Мы вконтакте",
         icon: "icon-vk",
         iconWidth: "20",
-        iconHeight: "20"
+        iconHeight: "20",
+        attr: {
+          "rel": "noopener noreferer"
+        }
       },
     ]
 
   footer.footer(class=footerMods)
     .container
-      span.footer__copyrite &copy; 2018 &laquo;LoremIpsum.net&raquo; Все&nbsp;права защищены.
-      .footer__payment
-        each linkData in paymentData
-          +link(linkData).link--gray
-      .footer__contacts
-        each contactData in contactsData
-          +link(contactData)
+      .footer__content
+        span.footer__copyrite &copy; 2018 &laquo;LOREMIPSUM.NET&raquo; Все права защищены.
+        .footer__links
+          .footer__payment
+            each linkData in paymentData
+              +link(linkData).link--gray.footer__payment-link
+          .footer__contacts
+            each contactData in contactsData
+              +link(contactData).footer__contacts-link

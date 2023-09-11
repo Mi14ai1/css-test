@@ -3,8 +3,9 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-end;
-    margin: 0 -2px 0 0;
+    margin: -8px -2px 0 -60px;
     padding: 5px 0 0;
 
     list-style: none;
@@ -13,10 +14,8 @@
   &__item {
     display: block;
     line-height: 1em;
-  }
 
-  &__item:not(:last-child) {
-    margin-right: 60px;
+    margin: 8px 0 0 60px;
 
     @include vp-767 {
       margin-right: 0;
@@ -53,6 +52,7 @@
 
   &__wrapper {
     @include vp-767 {
+      overflow: auto;
       display: none;
     }
   }
