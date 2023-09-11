@@ -11,9 +11,17 @@
   svg {
     color: $color-summer-sky;
     margin-right: 10px;
+    transition: color $trans-default;
   }
 
   &--gray {
     color: silver;
+  }
+
+  @include hover-focus {
+    color: $color-summer-sky;
+    svg {
+      color: $color-default-white;
+    }
   }
 }

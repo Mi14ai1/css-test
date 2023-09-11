@@ -50,6 +50,7 @@
   padding: 0 19px 0 0;
   margin-left: 19px;
   margin-top: 5px;
+  transition: color $trans-default;
 
   @include vp-767 {
     padding-left: 0;
@@ -133,6 +134,7 @@
 
   svg {
     margin-top: -4px;
+    transition: color $trans-default;
   }
 }
 

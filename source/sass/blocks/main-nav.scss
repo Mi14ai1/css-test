@@ -33,8 +33,12 @@
     user-select: none;
 
     &.is-active {
-      opacity: 0.6;
+      opacity: 1;
       color: $color-summer-sky-lighter;
+
+      @include hover-focus {
+        opacity: 1;
+      }
     }
 
     @include hover-focus {
