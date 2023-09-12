@@ -2472,6 +2472,10 @@ button,
   }
 
   .footer__payment {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding-bottom: 15px;
     padding-left: 0;
     margin-top: -5px;
@@ -2483,6 +2487,10 @@ button,
   }
 
   .footer__contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding-bottom: 15px;
     padding-left: 0;
   }
